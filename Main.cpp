@@ -14,7 +14,7 @@ pull    std_log
 i32     max_values  4           // a read only value.
    
 // main function passes a commandline argument array.
-main ( string[] argument_array ) i32 exit_code
+main ( string[] argument_array ) int exit_code
 {
     b32 fullscreen, b32 dedicated
     
