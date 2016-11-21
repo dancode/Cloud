@@ -14,7 +14,7 @@ pull    std_log
 i32     max_values  4           // a read only value.
    
 // main function passes a commandline argument array.
-main ( string[] argument_array ) int exit_code
+main ( string[] argument_array ) i32 exit_code
 {
     b32 fullscreen, b32 dedicated
     
@@ -50,13 +50,14 @@ struct display_mode
     u16 height
     u16 refresh
 }
-display_mode:default() { return display_mode{ 1280, 758, 0 }}
-display_mode:width() { clamp( width, 640, 1920 ) }
-display_mode:height() { clamp( height, 480, 1080 ) }
-
-DisplayModeSetup()
+display_mode:default    () return display_mode: 1280, 758, 0
+display_mode:width      () clamp( width, 640, 1920 )
+display_mode:height     () clamp( height, 480, 1080 )
+display_mode_setup()
 {
-    display_mode dm = dm:default()
+    display_mode dm:default()
+    dm.width = 1280                 // will call dm:width clamp value
+    dm.height = 768                 // 
 }
 
 // Note: use without initialation = auto zero inialization by compiler.
