@@ -76,6 +76,50 @@ Reverse( char[] array )
         i++ j--
 }
 
+
+//==============================================================================================
+// Reflection And Meta Proramming
+
+// variable modifiers
+// refl = reflect
+// repl = replicate
+// conf = config
+// save = serialize
+// call = callable 
+// edit = editable
+
+i32 variable_name : conf : refl : cat( "pawn" )
+i32 variable_name : repl : refl : edit : save 
+
+                
+data_type*      variable_name
+
+for ( class:property : prop )
+{   
+    if ( prop.save ) file.write( prop.value )
+    if ( prop.conf ) conf.write( prop.name, prop.value )        
+}
+
+
+//==============================================================================================
+// AOS Array Of Structures
+
+data
+{
+    
+}
+
+//==============================================================================================
+// SOA Structure Of Arrays
+
+data
+{
+    array1[]
+    array2[]
+    array3[]
+}
+
+
 //==============================================================================================
 // Calling Code
 
