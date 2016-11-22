@@ -3,6 +3,62 @@
     Test Code           ::      GitHub Test Code
 
 ==============================================================================================*/
+// language deduces code intention and speficiation from context.
+// the context removes noise from the code and streamlines readability.
+// information that can be deduced inuitively is removed.
+
+// for visual clarity syntax is built around indentation and alignment.
+// common keywords, then less common.
+
+type_name   variable_name       // scope is module, value is 0.
+type_name   variable_name = 4   // scope is module, value is 4.
+type_name   
+type_name   readonly_name       // variable is read only
+type_name   
+
+
+// a function is a function because it takes an expression.
+// function has no return value since none is specified.
+
+func_name()
+{
+    type type                   // type is not assignment so must be instance.
+    type = value                // must be instance since type cant be assigned.
+}
+
+func_add_global( i32 number )    // 
+{
+    
+}
+
+func_bool() b32 success   // type returns bool (optionally) named success.
+{
+    success = true              // success type is known.
+    return success              // can use success as return parameter.
+}
+
+// The ( arguments ) is an expression.
+
+func_name()
+{
+    b32 success = func_bool()
+    if ( success )
+        
+}
+
+
+
+// context defines all operational expression.
+// scope defines all operations of work.
+// expressions define 
+
+
+
+
+
+//==============================================================================================
+// Sample Code
+//==============================================================================================
 
 pull    thirdparty_lib : tpl    // thirdpartly lib + using namespace
     
@@ -100,13 +156,41 @@ for ( class:property : prop )
     if ( prop.conf ) conf.write( prop.name, prop.value )        
 }
 
+propery_type : enum { repl, refl, edit, save, confg }
+property : struct
+{
+    
+}
+property_instance : struct      // per-instance of property.
+{
+    cb  created                 // each instance can have callback on it.
+    cb  changed                 // 
+    cb  destroyed               // 
+}
+
+// only if callback is used, then it is compiled into runtime.
+
+use_reflection( vartype var )
+{
+    class* class = vartype::class()
+    for ( class.prop : prop )
+    {
+        prop.type
+        prop.replicated
+        prop.config
+        prop.
+    }
+        
+}
 
 //==============================================================================================
 // AOS Array Of Structures
 
 data
 {
-    
+    i32 var1;
+    i32 var2;
+    i32 var3;
 }
 
 //==============================================================================================
